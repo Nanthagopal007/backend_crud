@@ -4,11 +4,15 @@ const mongoose =require('mongoose');
 
 const ProductSchema= mongoose.Schema(
     {
+        title:{
+            type:String,
+            required:[true,"please enter product name:"],
+        },
         name:{
             type:String,
             required:[true,"please enter product name:"],
         },
-        age:{
+        size:{
             type:Number,
             required:true,
             default:0
@@ -16,21 +20,26 @@ const ProductSchema= mongoose.Schema(
         },
 
 
-        city:{
-            type:String,
+        price:{
+            type:Number,
             required:[true,"please enter product name:"],
+            default:0
             
 
         },
 
-        number:{
-            type:Number,
-            required:true,
-            default:0
+        description:{
+            type:String,
+            required:[true,"please enter product name:"],
+            
         },
         image:{
             type:String,
             required:false,
+        },
+        gender:{
+            type:String,
+            required:[true,"please enter product name:"],
         },
         
 
