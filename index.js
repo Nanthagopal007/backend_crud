@@ -6,15 +6,15 @@ const cors=require("cors");
 
 // Running On PORT
 const app = express();
-app.listen(8000, () => {
-  console.log("Server is Running on PORT 8000");
+app.listen(5000, () => {
+  console.log("Server is Running on PORT 5000");
 });
 
 // MiddleWare
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:5000',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
